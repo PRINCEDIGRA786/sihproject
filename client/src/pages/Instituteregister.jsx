@@ -183,7 +183,7 @@ export default function InstitutionRegister() {
                                         placeholder={`Enter ${label}`}
                                         value={value}
                                         onChange={(e) => setRegistrationData({ ...registrationData, [field]: e.target.value })}
-                                        className="p-2 border border-gray-300 rounded mt-1"
+                                        className="p-2 border w-full border-gray-300 rounded mt-1"
                                     />
                                 </div>
                             ))}

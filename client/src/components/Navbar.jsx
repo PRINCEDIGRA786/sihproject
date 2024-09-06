@@ -34,32 +34,26 @@ export default function Navbar() {
             </h2>
             <ul className="ml-6 mt-2 space-y-2">
               <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>navigate('/otr')}>Apply For One Time Registration (OTR)</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Apply For Scholarship</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>{navigate('/studentDashboard')}}>Student Dashboard</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Application Status</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Track Your Payment</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Previous Records</li>
+              {/* if logedd in then student registration */}
+              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>navigate('/studentregister')}>Student Registration</li>
+
+              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>{navigate('/otr')}}>Student Login</li>
+              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>{navigate('/studentportal')}}>Student Portal</li>
+              
             </ul>
           </div>
 
-          {/* <div>
-            <h2 className="flex items-center text-lg font-bold">
-              <FaUniversity className="mr-2 text-2xl text-pink-600" /> Institute
-            </h2>
-            <ul className="ml-6 mt-2 space-y-2">
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Login</li>
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Signup</li>
-            </ul>
-          </div> */}
+        
 
           <div>
             <h2 className="flex items-center text-lg font-bold">
               <FaUsers className="mr-2 text-2xl text-pink-600" /> Officers
             </h2>
             <ul className="ml-6 mt-2 space-y-2">
-              <li className='text-md font-semibold cursor-pointer hover:font-bold'>Login</li>
+              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>navigate('/institutelogin')}>Institute Login</li>
               <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>{navigate('/instituteregister')}}>Institute Register</li>
               {/* <li className='text-md font-semibold cursor-pointer hover:font-bold'>Nodal Officers</li> */}
+              <li className='text-md font-semibold cursor-pointer hover:font-bold' onClick={()=>{navigate('/saglogin')}}>SAG login</li>
             </ul>
           </div>
           <div className='px-3 py-2 bg-slate-200' >
